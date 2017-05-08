@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "LogInViewController.h"
+#import "NewTodoViewController.h"
 
 @import FirebaseAuth;
 @import Firebase;
@@ -33,6 +34,7 @@
     
     [self checkUserStatus];
     [self setupFirebase];
+    [self checkUserStatus];
 
 }
 
@@ -78,6 +80,12 @@
             NSLog(@"Todo Title: %@ - Content: %@", todoTitle, todoContent);
         }
     }];
+}
+
+- (IBAction)logoutButtonPressed:(id)sender {
+    NSError *signOutError;
+    [[FIRAuth auth] signOut:&signOutError];
+//    NSLog(@"User Logged Out");
 }
 
 @end

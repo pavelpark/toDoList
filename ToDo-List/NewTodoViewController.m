@@ -40,7 +40,4 @@
     
 }
 
-//    NSError *signOutError;
-//    [[FIRAuth auth] signOut:&signOutError];
-
 @end

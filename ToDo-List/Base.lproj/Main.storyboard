@@ -40,7 +40,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="TODO LIST" id="I5R-UK-30V">
-                        <barButtonItem key="leftBarButtonItem" title="LOGOUT" id="11a-2V-dai"/>
+                        <barButtonItem key="leftBarButtonItem" title="LOGOUT" id="11a-2V-dai">
+                            <connections>
+                                <action selector="logoutButtonPressed:" destination="BYZ-38-t0r" id="DCQ-XY-xXI"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
