@@ -8,6 +8,9 @@
 
 #import "NewTodoViewController.h"
 
+@import Firebase;
+@import FirebaseAuth;
+
 @interface NewTodoViewController ()
 
 @property (weak, nonatomic) IBOutlet UITextField *titleTextFeild;
@@ -24,6 +27,16 @@
     
 }
 - (IBAction)addTodoPressed:(id)sender {
+    
+    FIRDatabaseReference *databaseReference = [[FIRDatabase database] reference];
+    FIRUser *currentUser = [[FIRAuth auth] currentUser];
+    
+    FIRDatabaseReference *userReference = [[databaseReference child:@"users"] child:currentUser.uid];
+    
+    FIRDatabaseReference *newTodoReference = [[userReference child:@"todos"] childByAutoId];
+    
+    [[newTodoReference child:@"title"] setValue:self.titleTextFeild.text];
+    [[newTodoReference child:@"content"] setValue:self.contentTextFeild.text];
     
 }
 
