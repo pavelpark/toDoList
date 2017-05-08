@@ -33,13 +33,13 @@
     [super viewDidAppear:animated];
     
     [self checkUserStatus];
-    [self setupFirebase];
-    [self checkUserStatus];
 
 }
 
 
 -(void)checkUserStatus{
+    
+    //If function for the checkUserStats
     
     if (![[FIRAuth auth] currentUser]) {
         
@@ -52,6 +52,8 @@
     }
 }
 
+//These are the else functions.
+
 -(void)setupFirebase{
     
     FIRDatabaseReference *databaseReference = [[FIRDatabase database] reference];
@@ -61,6 +63,8 @@
     
     NSLog(@"USER REFERENCE: %@", self.userReference);
 }
+
+//Else Function.
 
 -(void)startMonitoringTodoUpdates{
     
@@ -85,6 +89,7 @@
 - (IBAction)logoutButtonPressed:(id)sender {
     NSError *signOutError;
     [[FIRAuth auth] signOut:&signOutError];
+    [self checkUserStatus];
 //    NSLog(@"User Logged Out");
 }
 
