@@ -30,7 +30,7 @@
         <!--Log In View Controller-->
         <scene sceneID="vsO-Qj-dsN">
             <objects>
-                <viewController id="kxA-oO-Vfl" customClass="LogInViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LogInViewController" id="kxA-oO-Vfl" customClass="LogInViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="gRL-yB-I2v"/>
                         <viewControllerLayoutGuide type="bottom" id="jzp-Aw-5iR"/>
