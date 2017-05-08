@@ -90,17 +90,7 @@
 		DBC305401EC0DD8B002AA4FB /* ToDo-List */ = {
 			isa = PBXGroup;
 			children = (
-				DBC305441EC0DD8B002AA4FB /* AppDelegate.h */,
-				DBC305451EC0DD8B002AA4FB /* AppDelegate.m */,
-				DBC305471EC0DD8B002AA4FB /* ViewController.h */,
-				DBC305481EC0DD8B002AA4FB /* ViewController.m */,
-				DBC3054A1EC0DD8C002AA4FB /* Main.storyboard */,
-				DBC3055D1EC10E5D002AA4FB /* NewTodoViewController.h */,
-				DBC3055E1EC10E5D002AA4FB /* NewTodoViewController.m */,
-				DBC3055A1EC0EBC7002AA4FB /* LogInViewController.h */,
-				DBC3055B1EC0EBC7002AA4FB /* LogInViewController.m */,
-				DBC3054D1EC0DD8C002AA4FB /* Assets.xcassets */,
-				DBC3054F1EC0DD8C002AA4FB /* LaunchScreen.storyboard */,
+				DBC305601EC1206B002AA4FB /* New Group */,
 				DBC305521EC0DD8C002AA4FB /* Info.plist */,
 				DBC305581EC0DFF9002AA4FB /* GoogleService-Info.plist */,
 				DBC305411EC0DD8B002AA4FB /* Supporting Files */,
@@ -114,6 +104,48 @@
 				DBC305421EC0DD8B002AA4FB /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		DBC305601EC1206B002AA4FB /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+				DBC305631EC1207E002AA4FB /* Controller */,
+				DBC305621EC12078002AA4FB /* View */,
+				DBC305611EC12072002AA4FB /* Model */,
+			);
+			name = "New Group";
+			sourceTree = "<group>";
+		};
+		DBC305611EC12072002AA4FB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				DBC305441EC0DD8B002AA4FB /* AppDelegate.h */,
+				DBC305451EC0DD8B002AA4FB /* AppDelegate.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		DBC305621EC12078002AA4FB /* View */ = {
+			isa = PBXGroup;
+			children = (
+				DBC3054A1EC0DD8C002AA4FB /* Main.storyboard */,
+				DBC3054D1EC0DD8C002AA4FB /* Assets.xcassets */,
+				DBC3054F1EC0DD8C002AA4FB /* LaunchScreen.storyboard */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		DBC305631EC1207E002AA4FB /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				DBC305471EC0DD8B002AA4FB /* ViewController.h */,
+				DBC305481EC0DD8B002AA4FB /* ViewController.m */,
+				DBC3055D1EC10E5D002AA4FB /* NewTodoViewController.h */,
+				DBC3055E1EC10E5D002AA4FB /* NewTodoViewController.m */,
+				DBC3055A1EC0EBC7002AA4FB /* LogInViewController.h */,
+				DBC3055B1EC0EBC7002AA4FB /* LogInViewController.m */,
+			);
+			name = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

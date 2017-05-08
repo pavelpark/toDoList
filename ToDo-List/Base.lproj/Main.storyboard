@@ -39,7 +39,9 @@
                             <constraint firstItem="QdC-Oq-0Gf" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="nEt-3Q-fce"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="TODO LIST" id="I5R-UK-30V"/>
+                    <navigationItem key="navigationItem" title="TODO LIST" id="I5R-UK-30V">
+                        <barButtonItem key="leftBarButtonItem" title="LOGOUT" id="11a-2V-dai"/>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
