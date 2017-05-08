@@ -21,6 +21,10 @@
 @implementation LogInViewController
 
 - (IBAction)loginPressed:(id)sender {
+    
+//    NSError *signOutError;
+//    [[FIRAuth auth] signOut:&signOutError];
+    
    [[FIRAuth auth] signInWithEmail:self.emailTextFeild.text password:self.passwordTextFeild.text completion:^(FIRUser * _Nullable user, NSError * _Nullable error) {
        if (error) {
            NSLog(@"Error Signing in: %@", error.localizedDescription);
