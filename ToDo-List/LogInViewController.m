@@ -18,6 +18,14 @@
 
 @implementation LogInViewController
 
+- (IBAction)loginPressed:(id)sender {
+    
+}
+
+- (IBAction)signupPressed:(id)sender {
+    
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     
