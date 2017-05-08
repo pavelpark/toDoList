@@ -145,6 +145,10 @@
         <scene sceneID="l7P-Fs-jzi">
             <objects>
                 <viewController id="qYz-em-0it" customClass="NewTodoViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="i1M-6h-Yq6"/>
+                        <viewControllerLayoutGuide type="bottom" id="hea-Fu-5Nj"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="JVe-br-hFf">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="150"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -152,7 +156,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NEW TODO:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="esE-Ae-WTu">
                                 <rect key="frame" x="140" y="10" width="94.5" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Todo Title " textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="auF-nG-xOv">
@@ -178,7 +182,7 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" red="0.0" green="0.80000000000000004" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.0" green="0.80000000000000004" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="iqc-Gv-VfH" secondAttribute="bottom" constant="5" id="69z-zV-IFx"/>
                             <constraint firstItem="auF-nG-xOv" firstAttribute="top" secondItem="esE-Ae-WTu" secondAttribute="bottom" constant="8" id="6Dx-ZQ-Yhv"/>
