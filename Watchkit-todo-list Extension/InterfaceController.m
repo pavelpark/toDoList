@@ -8,6 +8,8 @@
 
 #import "InterfaceController.h"
 
+#import "TodoRowController.h"
+
 #import "toDo.h"
 
 @interface InterfaceController ()
@@ -25,6 +27,18 @@
     [super awakeWithContext:context];
 
     // Configure interface objects here.
+}
+
+-(void)setupTable{
+    [self.table setNumberOfRows:self.allTodos.count withRowType:@"TodoRowController"];
+    
+    for (NSInteger i = 0; i < self.allTodos.count; i++) {
+        
+        TodoRowController *rowController = [self.table rowControllerAtIndex:i];
+        
+        [rowController.titleLabel setText:self.allTodos[i].title];
+        [rowController.contentLabel setText:self.allTodos[i].content];
+    }
 }
 
 -(NSArray<Todo *> *)allTodos{
@@ -51,6 +65,10 @@
 - (void)didDeactivate {
     // This method is called when watch view controller is no longer visible
     [super didDeactivate];
+}
+
+-(void)table:(WKInterfaceTable *)table didSelectRowAtIndex:(NSInteger)rowIndex{
+    
 }
 
 @end

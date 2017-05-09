@@ -4,6 +4,11 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>TV-todo-list.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>5</integer>
+		</dict>
 		<key>ToDo-List.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -23,6 +28,11 @@
 			<true/>
 		</dict>
 		<key>DBC305681EC233A9002AA4FB</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>DBC305951EC246C1002AA4FB</key>
 		<dict>
 			<key>primary</key>
 			<true/>
