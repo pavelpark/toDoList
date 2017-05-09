@@ -24,6 +24,7 @@
 		DBC3057F1EC233A9002AA4FB /* ExtensionDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DBC3057E1EC233A9002AA4FB /* ExtensionDelegate.m */; };
 		DBC305811EC233AA002AA4FB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DBC305801EC233AA002AA4FB /* Assets.xcassets */; };
 		DBC305851EC233AA002AA4FB /* Watchkit-todo-list.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = DBC305691EC233A9002AA4FB /* Watchkit-todo-list.app */; };
+		DBC305901EC23F3C002AA4FB /* TodoRowController.m in Sources */ = {isa = PBXBuildFile; fileRef = DBC3058F1EC23F3C002AA4FB /* TodoRowController.m */; };
 		F5DDECF94D2CDE7644A86C5B /* libPods-ToDo-List.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 55D04110D51D1BE249F86F4A /* libPods-ToDo-List.a */; };
 /* End PBXBuildFile section */
 
@@ -101,6 +102,8 @@
 		DBC3057E1EC233A9002AA4FB /* ExtensionDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ExtensionDelegate.m; sourceTree = "<group>"; };
 		DBC305801EC233AA002AA4FB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DBC305821EC233AA002AA4FB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DBC3058E1EC23F3C002AA4FB /* TodoRowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TodoRowController.h; sourceTree = "<group>"; };
+		DBC3058F1EC23F3C002AA4FB /* TodoRowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TodoRowController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -237,6 +240,8 @@
 		DBC305791EC233A9002AA4FB /* Watchkit-todo-list Extension */ = {
 			isa = PBXGroup;
 			children = (
+				DBC3058E1EC23F3C002AA4FB /* TodoRowController.h */,
+				DBC3058F1EC23F3C002AA4FB /* TodoRowController.m */,
 				DBC3057A1EC233A9002AA4FB /* InterfaceController.h */,
 				DBC3057B1EC233A9002AA4FB /* InterfaceController.m */,
 				DBC3057D1EC233A9002AA4FB /* ExtensionDelegate.h */,
@@ -451,6 +456,7 @@
 			files = (
 				DBC3057F1EC233A9002AA4FB /* ExtensionDelegate.m in Sources */,
 				DBC3057C1EC233A9002AA4FB /* InterfaceController.m in Sources */,
+				DBC305901EC23F3C002AA4FB /* TodoRowController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

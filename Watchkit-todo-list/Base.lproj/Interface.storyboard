@@ -9,17 +9,17 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="12029"/>
     </dependencies>
     <scenes>
-        <!--Interface Controller-->
+        <!--InterfaceController-->
         <scene sceneID="aou-V4-d1y">
             <objects>
-                <controller id="AgC-eL-Hgc" customClass="InterfaceController">
+                <controller identifier="InterfaceController" id="AgC-eL-Hgc" customClass="InterfaceController">
                     <items>
                         <table alignment="left" id="lH6-fj-QWH">
                             <items>
                                 <tableRow id="FyY-lt-ZRI">
                                     <group key="rootItem" width="1" height="0.0" alignment="left" layout="vertical" id="jMf-71-ls1">
                                         <items>
-                                            <label alignment="left" text="Label" id="VP7-8y-ql8">
+                                            <label alignment="left" text="Title" id="VP7-8y-ql8">
                                                 <fontDescription key="font" style="UICTFontTextStyleHeadline"/>
                                             </label>
                                             <label alignment="left" text="Content" numberOfLines="0" id="Pp1-zA-Zle"/>
@@ -29,6 +29,9 @@
                             </items>
                         </table>
                     </items>
+                    <connections>
+                        <outlet property="table" destination="lH6-fj-QWH" id="Suk-x8-7es"/>
+                    </connections>
                 </controller>
             </objects>
         </scene>
