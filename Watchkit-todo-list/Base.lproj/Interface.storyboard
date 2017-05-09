@@ -16,7 +16,7 @@
                     <items>
                         <table alignment="left" id="lH6-fj-QWH">
                             <items>
-                                <tableRow id="FyY-lt-ZRI">
+                                <tableRow identifier="TodoRowController" id="FyY-lt-ZRI" customClass="TodoRowController">
                                     <group key="rootItem" width="1" height="0.0" alignment="left" layout="vertical" id="jMf-71-ls1">
                                         <items>
                                             <label alignment="left" text="Title" id="VP7-8y-ql8">
@@ -25,6 +25,10 @@
                                             <label alignment="left" text="Content" numberOfLines="0" id="Pp1-zA-Zle"/>
                                         </items>
                                     </group>
+                                    <connections>
+                                        <outlet property="contentLabel" destination="Pp1-zA-Zle" id="HKM-Bf-tBg"/>
+                                        <outlet property="titleLabel" destination="VP7-8y-ql8" id="OXM-ar-NCC"/>
+                                    </connections>
                                 </tableRow>
                             </items>
                         </table>
