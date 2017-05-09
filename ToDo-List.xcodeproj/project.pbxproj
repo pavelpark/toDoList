@@ -30,6 +30,8 @@
 		DBC3059D1EC246C1002AA4FB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DBC3059C1EC246C1002AA4FB /* AppDelegate.m */; };
 		DBC305A31EC246C1002AA4FB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DBC305A11EC246C1002AA4FB /* Main.storyboard */; };
 		DBC305A51EC246C1002AA4FB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DBC305A41EC246C1002AA4FB /* Assets.xcassets */; };
+		DBC305AC1EC248CE002AA4FB /* TVHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DBC305AB1EC248CE002AA4FB /* TVHomeViewController.m */; };
+		DBC305AD1EC249D5002AA4FB /* toDo.m in Sources */ = {isa = PBXBuildFile; fileRef = DBC305651EC22D13002AA4FB /* toDo.m */; };
 		F5DDECF94D2CDE7644A86C5B /* libPods-ToDo-List.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 55D04110D51D1BE249F86F4A /* libPods-ToDo-List.a */; };
 /* End PBXBuildFile section */
 
@@ -116,6 +118,8 @@
 		DBC305A21EC246C1002AA4FB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DBC305A41EC246C1002AA4FB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DBC305A61EC246C1002AA4FB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DBC305AA1EC248CE002AA4FB /* TVHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TVHomeViewController.h; sourceTree = "<group>"; };
+		DBC305AB1EC248CE002AA4FB /* TVHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TVHomeViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -276,6 +280,8 @@
 		DBC305971EC246C1002AA4FB /* TV-todo-list */ = {
 			isa = PBXGroup;
 			children = (
+				DBC305AA1EC248CE002AA4FB /* TVHomeViewController.h */,
+				DBC305AB1EC248CE002AA4FB /* TVHomeViewController.m */,
 				DBC3059B1EC246C1002AA4FB /* AppDelegate.h */,
 				DBC3059C1EC246C1002AA4FB /* AppDelegate.m */,
 				DBC305A11EC246C1002AA4FB /* Main.storyboard */,
@@ -541,6 +547,8 @@
 			files = (
 				DBC3059D1EC246C1002AA4FB /* AppDelegate.m in Sources */,
 				DBC3059A1EC246C1002AA4FB /* main.m in Sources */,
+				DBC305AC1EC248CE002AA4FB /* TVHomeViewController.m in Sources */,
+				DBC305AD1EC249D5002AA4FB /* toDo.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
