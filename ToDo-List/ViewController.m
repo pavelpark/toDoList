@@ -14,14 +14,14 @@
 @import FirebaseAuth;
 @import Firebase;
 
-@interface ViewController () <UITableViewDataSource>
+@interface ViewController () <UITableViewDataSource, UITableViewDelegate>
 
 @property(strong, nonatomic) FIRDatabaseReference *userReference;
 @property(strong, nonatomic) FIRUser *currentUser;
 
 @property(nonatomic) FIRDatabaseHandle allTodosHandler;
 
-@property(strong,nonatomic) UITableView *todoTableView;
+@property (weak, nonatomic) IBOutlet UITableView *todoTableView;
 @property(strong,nonatomic) NSMutableArray *allTodos;
 
 @end
@@ -30,14 +30,15 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-
+    
+    self.todoTableView.delegate = self;
+    self.todoTableView.dataSource = self;
 }
 
 -(void)viewDidAppear:(BOOL)animated{
     [super viewDidAppear:animated];
     
     [self checkUserStatus];
-
 }
 
 
@@ -74,38 +75,42 @@
     
     self.allTodosHandler = [[self.userReference child:@"todos"] observeEventType:FIRDataEventTypeValue withBlock:^(FIRDataSnapshot * _Nonnull snapshot) {
         
-//        NSMutableArray *allTodos = [[NSMutableArray alloc]init];
         self.allTodos = [[NSMutableArray alloc]init];
         
         for (FIRDataSnapshot *child in snapshot.children) {
+            toDo *todo = [[toDo alloc]init];
             
             NSDictionary *todoData = child.value;
             
-            NSString *todoTitle = todoData[@"title"];
-            NSString *todoContent = todoData[@"content"];
+            todo.title = todoData[@"title"];
+            todo.content = todoData[@"content"];
 
-            [self.allTodos addObject:todoData];
+            [self.allTodos addObject:todo];
             [self.todoTableView reloadData];
             
-            NSLog(@"Todo Title: %@ - Content: %@", todoTitle, todoContent);
         }
     }];
 }
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return [self.allTodos count];
+    return self.allTodos.count;
 }
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
     
-    NSDictionary *currentToDo = self.allTodos[indexPath.row];
+    if (cell == nil) {
+        cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:@"cell"];
+    }
+    toDo *child = [self.allTodos objectAtIndex:indexPath.row];
     
-    NSString *todoTitle = currentToDo[@"title"];
-    NSString *todoContent = currentToDo[@"content"];
-    
-    cell.textLabel.text = [NSString stringWithFormat:@"Todo Title: %@ - Content: %@", todoTitle, todoContent];
-    
+    cell.textLabel.text = [NSString stringWithFormat:@"%@", child.title];
+//    NSDictionary *currentToDo = self.allTodos[indexPath.row];
+//    
+//    NSString *todoTitle = currentToDo[@"title"];
+//    NSString *todoContent = currentToDo[@"content"];
+//    
+//    cell.textLabel.text = [NSString stringWithFormat:@"Todo Title: %@ - Content: %@", todoTitle, todoContent];
+//    
     return cell;
 }
 
