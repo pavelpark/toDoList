@@ -17,8 +17,57 @@
 		DBC3055C1EC0EBC7002AA4FB /* LogInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DBC3055B1EC0EBC7002AA4FB /* LogInViewController.m */; };
 		DBC3055F1EC10E5D002AA4FB /* NewTodoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DBC3055E1EC10E5D002AA4FB /* NewTodoViewController.m */; };
 		DBC305661EC22D13002AA4FB /* toDo.m in Sources */ = {isa = PBXBuildFile; fileRef = DBC305651EC22D13002AA4FB /* toDo.m */; };
+		DBC3056D1EC233A9002AA4FB /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DBC3056B1EC233A9002AA4FB /* Interface.storyboard */; };
+		DBC3056F1EC233A9002AA4FB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DBC3056E1EC233A9002AA4FB /* Assets.xcassets */; };
+		DBC305761EC233A9002AA4FB /* Watchkit-todo-list Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = DBC305751EC233A9002AA4FB /* Watchkit-todo-list Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		DBC3057C1EC233A9002AA4FB /* InterfaceController.m in Sources */ = {isa = PBXBuildFile; fileRef = DBC3057B1EC233A9002AA4FB /* InterfaceController.m */; };
+		DBC3057F1EC233A9002AA4FB /* ExtensionDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DBC3057E1EC233A9002AA4FB /* ExtensionDelegate.m */; };
+		DBC305811EC233AA002AA4FB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DBC305801EC233AA002AA4FB /* Assets.xcassets */; };
+		DBC305851EC233AA002AA4FB /* Watchkit-todo-list.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = DBC305691EC233A9002AA4FB /* Watchkit-todo-list.app */; };
 		F5DDECF94D2CDE7644A86C5B /* libPods-ToDo-List.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 55D04110D51D1BE249F86F4A /* libPods-ToDo-List.a */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		DBC305771EC233A9002AA4FB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DBC305361EC0DD8B002AA4FB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DBC305741EC233A9002AA4FB;
+			remoteInfo = "Watchkit-todo-list Extension";
+		};
+		DBC305831EC233AA002AA4FB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DBC305361EC0DD8B002AA4FB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DBC305681EC233A9002AA4FB;
+			remoteInfo = "Watchkit-todo-list";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		DBC305891EC233AA002AA4FB /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				DBC305761EC233A9002AA4FB /* Watchkit-todo-list Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DBC3058D1EC233AA002AA4FB /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				DBC305851EC233AA002AA4FB /* Watchkit-todo-list.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		55D04110D51D1BE249F86F4A /* libPods-ToDo-List.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ToDo-List.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -41,6 +90,17 @@
 		DBC3055E1EC10E5D002AA4FB /* NewTodoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewTodoViewController.m; sourceTree = "<group>"; };
 		DBC305641EC22D13002AA4FB /* toDo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = toDo.h; sourceTree = "<group>"; };
 		DBC305651EC22D13002AA4FB /* toDo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = toDo.m; sourceTree = "<group>"; };
+		DBC305691EC233A9002AA4FB /* Watchkit-todo-list.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Watchkit-todo-list.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DBC3056C1EC233A9002AA4FB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
+		DBC3056E1EC233A9002AA4FB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		DBC305701EC233A9002AA4FB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DBC305751EC233A9002AA4FB /* Watchkit-todo-list Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Watchkit-todo-list Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DBC3057A1EC233A9002AA4FB /* InterfaceController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InterfaceController.h; sourceTree = "<group>"; };
+		DBC3057B1EC233A9002AA4FB /* InterfaceController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InterfaceController.m; sourceTree = "<group>"; };
+		DBC3057D1EC233A9002AA4FB /* ExtensionDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ExtensionDelegate.h; sourceTree = "<group>"; };
+		DBC3057E1EC233A9002AA4FB /* ExtensionDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ExtensionDelegate.m; sourceTree = "<group>"; };
+		DBC305801EC233AA002AA4FB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		DBC305821EC233AA002AA4FB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,6 +109,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				F5DDECF94D2CDE7644A86C5B /* libPods-ToDo-List.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DBC305721EC233A9002AA4FB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -76,6 +143,8 @@
 			isa = PBXGroup;
 			children = (
 				DBC305401EC0DD8B002AA4FB /* ToDo-List */,
+				DBC3056A1EC233A9002AA4FB /* Watchkit-todo-list */,
+				DBC305791EC233A9002AA4FB /* Watchkit-todo-list Extension */,
 				DBC3053F1EC0DD8B002AA4FB /* Products */,
 				08A556B2967A4ADDF6EDCE2C /* Pods */,
 				CC2B35A7FE0833CE86760014 /* Frameworks */,
@@ -86,6 +155,8 @@
 			isa = PBXGroup;
 			children = (
 				DBC3053E1EC0DD8B002AA4FB /* ToDo-List.app */,
+				DBC305691EC233A9002AA4FB /* Watchkit-todo-list.app */,
+				DBC305751EC233A9002AA4FB /* Watchkit-todo-list Extension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -153,6 +224,29 @@
 			name = Controller;
 			sourceTree = "<group>";
 		};
+		DBC3056A1EC233A9002AA4FB /* Watchkit-todo-list */ = {
+			isa = PBXGroup;
+			children = (
+				DBC3056B1EC233A9002AA4FB /* Interface.storyboard */,
+				DBC3056E1EC233A9002AA4FB /* Assets.xcassets */,
+				DBC305701EC233A9002AA4FB /* Info.plist */,
+			);
+			path = "Watchkit-todo-list";
+			sourceTree = "<group>";
+		};
+		DBC305791EC233A9002AA4FB /* Watchkit-todo-list Extension */ = {
+			isa = PBXGroup;
+			children = (
+				DBC3057A1EC233A9002AA4FB /* InterfaceController.h */,
+				DBC3057B1EC233A9002AA4FB /* InterfaceController.m */,
+				DBC3057D1EC233A9002AA4FB /* ExtensionDelegate.h */,
+				DBC3057E1EC233A9002AA4FB /* ExtensionDelegate.m */,
+				DBC305801EC233AA002AA4FB /* Assets.xcassets */,
+				DBC305821EC233AA002AA4FB /* Info.plist */,
+			);
+			path = "Watchkit-todo-list Extension";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -166,15 +260,51 @@
 				DBC3053C1EC0DD8B002AA4FB /* Resources */,
 				4513DB972981AA05D7650B9C /* [CP] Embed Pods Frameworks */,
 				7F06D0FCA07E53F83ED87F33 /* [CP] Copy Pods Resources */,
+				DBC3058D1EC233AA002AA4FB /* Embed Watch Content */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				DBC305841EC233AA002AA4FB /* PBXTargetDependency */,
 			);
 			name = "ToDo-List";
 			productName = "ToDo-List";
 			productReference = DBC3053E1EC0DD8B002AA4FB /* ToDo-List.app */;
 			productType = "com.apple.product-type.application";
+		};
+		DBC305681EC233A9002AA4FB /* Watchkit-todo-list */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DBC3058A1EC233AA002AA4FB /* Build configuration list for PBXNativeTarget "Watchkit-todo-list" */;
+			buildPhases = (
+				DBC305671EC233A9002AA4FB /* Resources */,
+				DBC305891EC233AA002AA4FB /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DBC305781EC233A9002AA4FB /* PBXTargetDependency */,
+			);
+			name = "Watchkit-todo-list";
+			productName = "Watchkit-todo-list";
+			productReference = DBC305691EC233A9002AA4FB /* Watchkit-todo-list.app */;
+			productType = "com.apple.product-type.application.watchapp2";
+		};
+		DBC305741EC233A9002AA4FB /* Watchkit-todo-list Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DBC305861EC233AA002AA4FB /* Build configuration list for PBXNativeTarget "Watchkit-todo-list Extension" */;
+			buildPhases = (
+				DBC305711EC233A9002AA4FB /* Sources */,
+				DBC305721EC233A9002AA4FB /* Frameworks */,
+				DBC305731EC233A9002AA4FB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Watchkit-todo-list Extension";
+			productName = "Watchkit-todo-list Extension";
+			productReference = DBC305751EC233A9002AA4FB /* Watchkit-todo-list Extension.appex */;
+			productType = "com.apple.product-type.watchkit2-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -186,6 +316,16 @@
 				ORGANIZATIONNAME = "Pavel Parkhomey";
 				TargetAttributes = {
 					DBC3053D1EC0DD8B002AA4FB = {
+						CreatedOnToolsVersion = 8.3.2;
+						DevelopmentTeam = 6X88V8MC7R;
+						ProvisioningStyle = Automatic;
+					};
+					DBC305681EC233A9002AA4FB = {
+						CreatedOnToolsVersion = 8.3.2;
+						DevelopmentTeam = 6X88V8MC7R;
+						ProvisioningStyle = Automatic;
+					};
+					DBC305741EC233A9002AA4FB = {
 						CreatedOnToolsVersion = 8.3.2;
 						DevelopmentTeam = 6X88V8MC7R;
 						ProvisioningStyle = Automatic;
@@ -206,6 +346,8 @@
 			projectRoot = "";
 			targets = (
 				DBC3053D1EC0DD8B002AA4FB /* ToDo-List */,
+				DBC305681EC233A9002AA4FB /* Watchkit-todo-list */,
+				DBC305741EC233A9002AA4FB /* Watchkit-todo-list Extension */,
 			);
 		};
 /* End PBXProject section */
@@ -219,6 +361,23 @@
 				DBC305591EC0DFF9002AA4FB /* GoogleService-Info.plist in Resources */,
 				DBC3054E1EC0DD8C002AA4FB /* Assets.xcassets in Resources */,
 				DBC3054C1EC0DD8C002AA4FB /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DBC305671EC233A9002AA4FB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DBC3056F1EC233A9002AA4FB /* Assets.xcassets in Resources */,
+				DBC3056D1EC233A9002AA4FB /* Interface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DBC305731EC233A9002AA4FB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DBC305811EC233AA002AA4FB /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -286,7 +445,29 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		DBC305711EC233A9002AA4FB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DBC3057F1EC233A9002AA4FB /* ExtensionDelegate.m in Sources */,
+				DBC3057C1EC233A9002AA4FB /* InterfaceController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		DBC305781EC233A9002AA4FB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DBC305741EC233A9002AA4FB /* Watchkit-todo-list Extension */;
+			targetProxy = DBC305771EC233A9002AA4FB /* PBXContainerItemProxy */;
+		};
+		DBC305841EC233AA002AA4FB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DBC305681EC233A9002AA4FB /* Watchkit-todo-list */;
+			targetProxy = DBC305831EC233AA002AA4FB /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		DBC3054A1EC0DD8C002AA4FB /* Main.storyboard */ = {
@@ -303,6 +484,14 @@
 				DBC305501EC0DD8C002AA4FB /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		DBC3056B1EC233A9002AA4FB /* Interface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DBC3056C1EC233A9002AA4FB /* Base */,
+			);
+			name = Interface.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -426,6 +615,70 @@
 			};
 			name = Release;
 		};
+		DBC305871EC233AA002AA4FB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				DEVELOPMENT_TEAM = 6X88V8MC7R;
+				INFOPLIST_FILE = "Watchkit-todo-list Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.MyFirstApp..ToDo-List.watchkitapp.watchkitextension";
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 3.2;
+			};
+			name = Debug;
+		};
+		DBC305881EC233AA002AA4FB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				DEVELOPMENT_TEAM = 6X88V8MC7R;
+				INFOPLIST_FILE = "Watchkit-todo-list Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.MyFirstApp..ToDo-List.watchkitapp.watchkitextension";
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 3.2;
+			};
+			name = Release;
+		};
+		DBC3058B1EC233AA002AA4FB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 6X88V8MC7R;
+				IBSC_MODULE = Watchkit_todo_list_Extension;
+				INFOPLIST_FILE = "Watchkit-todo-list/Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.MyFirstApp..ToDo-List.watchkitapp";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 3.2;
+			};
+			name = Debug;
+		};
+		DBC3058C1EC233AA002AA4FB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 6X88V8MC7R;
+				IBSC_MODULE = Watchkit_todo_list_Extension;
+				INFOPLIST_FILE = "Watchkit-todo-list/Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.MyFirstApp..ToDo-List.watchkitapp";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 3.2;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -446,6 +699,22 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		DBC305861EC233AA002AA4FB /* Build configuration list for PBXNativeTarget "Watchkit-todo-list Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DBC305871EC233AA002AA4FB /* Debug */,
+				DBC305881EC233AA002AA4FB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		DBC3058A1EC233AA002AA4FB /* Build configuration list for PBXNativeTarget "Watchkit-todo-list" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DBC3058B1EC233AA002AA4FB /* Debug */,
+				DBC3058C1EC233AA002AA4FB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};
