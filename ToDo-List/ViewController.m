@@ -90,7 +90,11 @@
     NSError *signOutError;
     [[FIRAuth auth] signOut:&signOutError];
     [self checkUserStatus];
-//    NSLog(@"User Logged Out");
+    NSLog(@"User Logged Out");
 }
+- (IBAction)showAndHideController:(id)sender {
+    [self.childViewControllers[0] view].hidden = ![self.childViewControllers[0] view].hidden;
+}
+
 
 @end

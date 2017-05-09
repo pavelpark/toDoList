@@ -45,6 +45,11 @@
                                 <action selector="logoutButtonPressed:" destination="BYZ-38-t0r" id="DCQ-XY-xXI"/>
                             </connections>
                         </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="+" id="e9p-xI-xOe">
+                            <connections>
+                                <action selector="showAndHideController:" destination="BYZ-38-t0r" id="7XM-0Y-x02"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
