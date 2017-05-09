@@ -13,7 +13,7 @@
 @import FirebaseAuth;
 @import Firebase;
 
-@interface ViewController ()
+@interface ViewController () <UITableViewDataSource>
 
 @property(strong, nonatomic) FIRDatabaseReference *userReference;
 @property(strong, nonatomic) FIRUser *currentUser;
@@ -85,6 +85,17 @@
         }
     }];
 }
+-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    return [[NewTodoViewController superclass] count];
+}
+
+-(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"TodoCell" forIndexPath:indexPath];
+
+    return cell;
+}
+
 
 - (IBAction)logoutButtonPressed:(id)sender {
     NSError *signOutError;
