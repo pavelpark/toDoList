@@ -9,6 +9,7 @@
 #import "ViewController.h"
 #import "LogInViewController.h"
 #import "NewTodoViewController.h"
+#import "toDo.h"
 
 @import FirebaseAuth;
 @import Firebase;
@@ -19,6 +20,8 @@
 @property(strong, nonatomic) FIRUser *currentUser;
 
 @property(nonatomic) FIRDatabaseHandle allTodosHandler;
+
+@property(strong,nonatomic) UITableView *todoTableView;
 @property(strong,nonatomic) NSMutableArray *allTodos;
 
 @end
@@ -71,7 +74,8 @@
     
     self.allTodosHandler = [[self.userReference child:@"todos"] observeEventType:FIRDataEventTypeValue withBlock:^(FIRDataSnapshot * _Nonnull snapshot) {
         
-        NSMutableArray *allTodos = [[NSMutableArray alloc]init];
+//        NSMutableArray *allTodos = [[NSMutableArray alloc]init];
+        self.allTodos = [[NSMutableArray alloc]init];
         
         for (FIRDataSnapshot *child in snapshot.children) {
             
@@ -81,7 +85,7 @@
             NSString *todoContent = todoData[@"content"];
 
             [self.allTodos addObject:todoData];
-//            [self.todoTableView reloadData];
+            [self.todoTableView reloadData];
             
             NSLog(@"Todo Title: %@ - Content: %@", todoTitle, todoContent);
         }
@@ -96,6 +100,7 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
     
     NSDictionary *currentToDo = self.allTodos[indexPath.row];
+    
     NSString *todoTitle = currentToDo[@"title"];
     NSString *todoContent = currentToDo[@"content"];
     

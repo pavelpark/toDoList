@@ -16,6 +16,7 @@
 		DBC305591EC0DFF9002AA4FB /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DBC305581EC0DFF9002AA4FB /* GoogleService-Info.plist */; };
 		DBC3055C1EC0EBC7002AA4FB /* LogInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DBC3055B1EC0EBC7002AA4FB /* LogInViewController.m */; };
 		DBC3055F1EC10E5D002AA4FB /* NewTodoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DBC3055E1EC10E5D002AA4FB /* NewTodoViewController.m */; };
+		DBC305661EC22D13002AA4FB /* toDo.m in Sources */ = {isa = PBXBuildFile; fileRef = DBC305651EC22D13002AA4FB /* toDo.m */; };
 		F5DDECF94D2CDE7644A86C5B /* libPods-ToDo-List.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 55D04110D51D1BE249F86F4A /* libPods-ToDo-List.a */; };
 /* End PBXBuildFile section */
 
@@ -38,6 +39,8 @@
 		DBC3055B1EC0EBC7002AA4FB /* LogInViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LogInViewController.m; sourceTree = "<group>"; };
 		DBC3055D1EC10E5D002AA4FB /* NewTodoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewTodoViewController.h; sourceTree = "<group>"; };
 		DBC3055E1EC10E5D002AA4FB /* NewTodoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewTodoViewController.m; sourceTree = "<group>"; };
+		DBC305641EC22D13002AA4FB /* toDo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = toDo.h; sourceTree = "<group>"; };
+		DBC305651EC22D13002AA4FB /* toDo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = toDo.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +122,8 @@
 		DBC305611EC12072002AA4FB /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				DBC305641EC22D13002AA4FB /* toDo.h */,
+				DBC305651EC22D13002AA4FB /* toDo.m */,
 				DBC305441EC0DD8B002AA4FB /* AppDelegate.h */,
 				DBC305451EC0DD8B002AA4FB /* AppDelegate.m */,
 			);
@@ -273,6 +278,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DBC3055C1EC0EBC7002AA4FB /* LogInViewController.m in Sources */,
+				DBC305661EC22D13002AA4FB /* toDo.m in Sources */,
 				DBC305491EC0DD8B002AA4FB /* ViewController.m in Sources */,
 				DBC305461EC0DD8B002AA4FB /* AppDelegate.m in Sources */,
 				DBC3055F1EC10E5D002AA4FB /* NewTodoViewController.m in Sources */,
