@@ -25,7 +25,7 @@
                                             <label alignment="left" text="Content" numberOfLines="0" id="Pp1-zA-Zle"/>
                                         </items>
                                         <connections>
-                                            <segue destination="rkb-xE-JDW" kind="push" id="XG2-hs-ajC"/>
+                                            <segue destination="R5d-hx-dye" kind="modal" id="bOi-sF-78i"/>
                                         </connections>
                                     </group>
                                     <connections>
@@ -43,11 +43,11 @@
             </objects>
         </scene>
         <!--Interface Controller-->
-        <scene sceneID="Arz-bM-oRN">
+        <scene sceneID="bd7-P1-sAr">
             <objects>
-                <controller id="rkb-xE-JDW"/>
+                <controller id="R5d-hx-dye"/>
             </objects>
-            <point key="canvasLocation" x="296" y="37"/>
+            <point key="canvasLocation" x="355" y="37"/>
         </scene>
     </scenes>
 </document>

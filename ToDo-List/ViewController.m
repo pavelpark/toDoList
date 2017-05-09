@@ -22,6 +22,7 @@
 @property(nonatomic) FIRDatabaseHandle allTodosHandler;
 
 @property (weak, nonatomic) IBOutlet UITableView *todoTableView;
+
 @property(strong,nonatomic) NSMutableArray *allTodos;
 
 @end
@@ -91,6 +92,17 @@
         }
     }];
 }
+
+-(BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath{
+    return YES;
+}
+
+-(void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath{
+    if (editingStyle == UITableViewCellEditingStyleDelete) {
+        [_allTodos removeObjectAtIndex:indexPath.row];
+        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
+    }
+}
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     return self.allTodos.count;
 }
@@ -98,19 +110,11 @@
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
     
-    if (cell == nil) {
-        cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:@"cell"];
-    }
     toDo *child = [self.allTodos objectAtIndex:indexPath.row];
     
     cell.textLabel.text = [NSString stringWithFormat:@"%@", child.title];
-//    NSDictionary *currentToDo = self.allTodos[indexPath.row];
-//    
-//    NSString *todoTitle = currentToDo[@"title"];
-//    NSString *todoContent = currentToDo[@"content"];
-//    
-//    cell.textLabel.text = [NSString stringWithFormat:@"Todo Title: %@ - Content: %@", todoTitle, todoContent];
-//    
+    cell.textLabel.text = [NSString stringWithFormat:@"%@", child.content];
+
     return cell;
 }
 
