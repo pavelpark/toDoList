@@ -19,6 +19,7 @@
 @property(strong, nonatomic) FIRUser *currentUser;
 
 @property(nonatomic) FIRDatabaseHandle allTodosHandler;
+@property(strong,nonatomic) NSMutableArray *allTodos;
 
 @end
 
@@ -79,23 +80,29 @@
             NSString *todoTitle = todoData[@"title"];
             NSString *todoContent = todoData[@"content"];
 
-            //for lab new TOdo to alltodos will need to append to the array.
+            [self.allTodos addObject:todoData];
+//            [self.todoTableView reloadData];
             
             NSLog(@"Todo Title: %@ - Content: %@", todoTitle, todoContent);
         }
     }];
 }
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return [[NewTodoViewController superclass] count];
+    return [self.allTodos count];
 }
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"TodoCell" forIndexPath:indexPath];
-
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
+    
+    NSDictionary *currentToDo = self.allTodos[indexPath.row];
+    NSString *todoTitle = currentToDo[@"title"];
+    NSString *todoContent = currentToDo[@"content"];
+    
+    cell.textLabel.text = [NSString stringWithFormat:@"Todo Title: %@ - Content: %@", todoTitle, todoContent];
+    
     return cell;
 }
-
 
 - (IBAction)logoutButtonPressed:(id)sender {
     NSError *signOutError;
@@ -103,6 +110,7 @@
     [self checkUserStatus];
     NSLog(@"User Logged Out");
 }
+
 - (IBAction)showAndHideController:(id)sender {
     [self.childViewControllers[0] view].hidden = ![self.childViewControllers[0] view].hidden;
 }
