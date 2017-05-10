@@ -23,7 +23,17 @@
         
         NSDictionary *rootObject = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:nil];
         
-        NSLog(@"ROOT OBJECT: %@", rootObject);
+//        NSLog(@"ROOT OBJECT: %@", rootObject);
+        
+        NSMutableArray *allTodos = [[NSMutableArray alloc]init];
+        
+        for (NSDictionary *userTodosDictionary in [rootObject allValues]) {
+            NSArray *userTodos = [userTodosDictionary[@"todos"] allValues];
+            
+            NSLog(@"%@", userTodos);
+        }
+        
+        
     }] resume];
 }
 
