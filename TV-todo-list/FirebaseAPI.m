@@ -30,10 +30,20 @@
         for (NSDictionary *userTodosDictionary in [rootObject allValues]) {
             NSArray *userTodos = [userTodosDictionary[@"todos"] allValues];
             
-            NSLog(@"%@", userTodos);
+            for (NSDictionary *todoDictionary in userTodos) {
+                
+                toDo *newTodo = [[toDo alloc]init];
+                
+                newTodo.title = todoDictionary[@"title"];
+                newTodo.content = todoDictionary[@"content"];
+                //assign other todo properties here...
+                
+                [allTodos addObject:newTodo];
+            }
         }
-        
-        
+        if (completion) {
+            completion(allTodos);
+        }
     }] resume];
 }
 
