@@ -32,6 +32,10 @@
             
             for (NSDictionary *todoDictionary in userTodos) {
                 
+//                if (todoDictionary[@"email"] isEqualToString:email) {
+//                    <#statements#>
+//                }
+                
                 toDo *newTodo = [[toDo alloc]init];
                 
                 newTodo.title = todoDictionary[@"title"];
@@ -46,6 +50,7 @@
             dispatch_async(dispatch_get_main_queue(), ^{
             completion(allTodos);
             });
+            
         }
     }] resume];
 }
