@@ -81,6 +81,7 @@
 		55D04110D51D1BE249F86F4A /* libPods-ToDo-List.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ToDo-List.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC56B1AE1C006AE0E2F878A1 /* Pods-ToDo-List.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ToDo-List.release.xcconfig"; path = "Pods/Target Support Files/Pods-ToDo-List/Pods-ToDo-List.release.xcconfig"; sourceTree = "<group>"; };
 		C90313028B87948EF6A6FC48 /* Pods-ToDo-List.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ToDo-List.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ToDo-List/Pods-ToDo-List.debug.xcconfig"; sourceTree = "<group>"; };
+		DBBFD28A1EC382E7002D8195 /* Credentials.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Credentials.h; sourceTree = "<group>"; };
 		DBC3053E1EC0DD8B002AA4FB /* ToDo-List.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ToDo-List.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DBC305421EC0DD8B002AA4FB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		DBC305441EC0DD8B002AA4FB /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -285,6 +286,7 @@
 				DBC3059B1EC246C1002AA4FB /* AppDelegate.h */,
 				DBC3059C1EC246C1002AA4FB /* AppDelegate.m */,
 				DBC305A11EC246C1002AA4FB /* Main.storyboard */,
+				DBBFD28A1EC382E7002D8195 /* Credentials.h */,
 				DBC305A41EC246C1002AA4FB /* Assets.xcassets */,
 				DBC305A61EC246C1002AA4FB /* Info.plist */,
 				DBC305981EC246C1002AA4FB /* Supporting Files */,
@@ -845,6 +847,7 @@
 				DBC305881EC233AA002AA4FB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		DBC3058A1EC233AA002AA4FB /* Build configuration list for PBXNativeTarget "Watchkit-todo-list" */ = {
 			isa = XCConfigurationList;
@@ -853,6 +856,7 @@
 				DBC3058C1EC233AA002AA4FB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		DBC305A71EC246C1002AA4FB /* Build configuration list for PBXNativeTarget "TV-todo-list" */ = {
 			isa = XCConfigurationList;
@@ -861,6 +865,7 @@
 				DBC305A91EC246C1002AA4FB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
