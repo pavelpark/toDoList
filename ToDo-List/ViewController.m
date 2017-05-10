@@ -9,16 +9,21 @@
 #import "ViewController.h"
 #import "LogInViewController.h"
 #import "NewTodoViewController.h"
+#import "toDo.h"
 
 @import FirebaseAuth;
 @import Firebase;
 
-@interface ViewController () <UITableViewDataSource>
+@interface ViewController () <UITableViewDataSource, UITableViewDelegate, UITabBarDelegate>
 
 @property(strong, nonatomic) FIRDatabaseReference *userReference;
 @property(strong, nonatomic) FIRUser *currentUser;
 
 @property(nonatomic) FIRDatabaseHandle allTodosHandler;
+
+@property (weak, nonatomic) IBOutlet UITableView *todoTableView;
+
+@property(strong,nonatomic) NSMutableArray *allTodos;
 
 @end
 
@@ -26,14 +31,15 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-
+    
+    self.todoTableView.delegate = self;
+    self.todoTableView.dataSource = self;
 }
 
 -(void)viewDidAppear:(BOOL)animated{
     [super viewDidAppear:animated];
     
     [self checkUserStatus];
-
 }
 
 
@@ -70,32 +76,47 @@
     
     self.allTodosHandler = [[self.userReference child:@"todos"] observeEventType:FIRDataEventTypeValue withBlock:^(FIRDataSnapshot * _Nonnull snapshot) {
         
-        NSMutableArray *allTodos = [[NSMutableArray alloc]init];
+        self.allTodos = [[NSMutableArray alloc]init];
         
         for (FIRDataSnapshot *child in snapshot.children) {
+            toDo *todo = [[toDo alloc]init];
             
             NSDictionary *todoData = child.value;
             
-            NSString *todoTitle = todoData[@"title"];
-            NSString *todoContent = todoData[@"content"];
+            todo.title = todoData[@"title"];
+            todo.content = todoData[@"content"];
 
-            //for lab new TOdo to alltodos will need to append to the array.
+            [self.allTodos addObject:todo];
+            [self.todoTableView reloadData];
             
-            NSLog(@"Todo Title: %@ - Content: %@", todoTitle, todoContent);
         }
     }];
 }
+
+-(BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath{
+    return YES;
+}
+
+-(void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath{
+    if (editingStyle == UITableViewCellEditingStyleDelete) {
+        [_allTodos removeObjectAtIndex:indexPath.row];
+        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
+    }
+}
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return [[NewTodoViewController superclass] count];
+    return self.allTodos.count;
 }
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
     
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"TodoCell" forIndexPath:indexPath];
+    toDo *child = [self.allTodos objectAtIndex:indexPath.row];
+    
+    cell.textLabel.text = [NSString stringWithFormat:@"%@", child.title];
+    cell.textLabel.text = [NSString stringWithFormat:@"%@", child.content];
 
     return cell;
 }
-
 
 - (IBAction)logoutButtonPressed:(id)sender {
     NSError *signOutError;
@@ -103,6 +124,7 @@
     [self checkUserStatus];
     NSLog(@"User Logged Out");
 }
+
 - (IBAction)showAndHideController:(id)sender {
     [self.childViewControllers[0] view].hidden = ![self.childViewControllers[0] view].hidden;
 }
