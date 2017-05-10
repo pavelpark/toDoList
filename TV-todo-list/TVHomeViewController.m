@@ -8,6 +8,7 @@
 
 #import "TVHomeViewController.h"
 #import "toDo.h"
+#import "FirebaseAPI.h"
 
 @interface TVHomeViewController ()<UITableViewDataSource>
 
@@ -22,6 +23,9 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.tableView.dataSource = self;
+    [FirebaseAPI fetchAllTodos:^(NSArray<toDo *> *allTodos) {
+        //come back
+    }];
 }
 
 - (void)didReceiveMemoryWarning {
