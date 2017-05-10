@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DBBFD28D1EC38436002D8195 /* FirebaseAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = DBBFD28C1EC38436002D8195 /* FirebaseAPI.m */; };
 		DBC305431EC0DD8B002AA4FB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DBC305421EC0DD8B002AA4FB /* main.m */; };
 		DBC305461EC0DD8B002AA4FB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DBC305451EC0DD8B002AA4FB /* AppDelegate.m */; };
 		DBC305491EC0DD8B002AA4FB /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DBC305481EC0DD8B002AA4FB /* ViewController.m */; };
@@ -82,6 +83,8 @@
 		AC56B1AE1C006AE0E2F878A1 /* Pods-ToDo-List.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ToDo-List.release.xcconfig"; path = "Pods/Target Support Files/Pods-ToDo-List/Pods-ToDo-List.release.xcconfig"; sourceTree = "<group>"; };
 		C90313028B87948EF6A6FC48 /* Pods-ToDo-List.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ToDo-List.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ToDo-List/Pods-ToDo-List.debug.xcconfig"; sourceTree = "<group>"; };
 		DBBFD28A1EC382E7002D8195 /* Credentials.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Credentials.h; sourceTree = "<group>"; };
+		DBBFD28B1EC38436002D8195 /* FirebaseAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FirebaseAPI.h; sourceTree = "<group>"; };
+		DBBFD28C1EC38436002D8195 /* FirebaseAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FirebaseAPI.m; sourceTree = "<group>"; };
 		DBC3053E1EC0DD8B002AA4FB /* ToDo-List.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ToDo-List.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DBC305421EC0DD8B002AA4FB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		DBC305441EC0DD8B002AA4FB /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -287,6 +290,8 @@
 				DBC3059C1EC246C1002AA4FB /* AppDelegate.m */,
 				DBC305A11EC246C1002AA4FB /* Main.storyboard */,
 				DBBFD28A1EC382E7002D8195 /* Credentials.h */,
+				DBBFD28B1EC38436002D8195 /* FirebaseAPI.h */,
+				DBBFD28C1EC38436002D8195 /* FirebaseAPI.m */,
 				DBC305A41EC246C1002AA4FB /* Assets.xcassets */,
 				DBC305A61EC246C1002AA4FB /* Info.plist */,
 				DBC305981EC246C1002AA4FB /* Supporting Files */,
@@ -548,6 +553,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DBC3059D1EC246C1002AA4FB /* AppDelegate.m in Sources */,
+				DBBFD28D1EC38436002D8195 /* FirebaseAPI.m in Sources */,
 				DBC3059A1EC246C1002AA4FB /* main.m in Sources */,
 				DBC305AC1EC248CE002AA4FB /* TVHomeViewController.m in Sources */,
 				DBC305AD1EC249D5002AA4FB /* toDo.m in Sources */,
