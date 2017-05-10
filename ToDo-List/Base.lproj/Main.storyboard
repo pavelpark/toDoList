@@ -93,6 +93,23 @@
             </objects>
             <point key="canvasLocation" x="1276" y="-583.3583208395803"/>
         </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="aTh-ZB-fpm">
+            <objects>
+                <tabBarController id="Sxl-o1-cmB" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="aSj-rE-8ic">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="show" id="8iU-ns-VU3"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="APA-Ah-I3Y" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1276" y="-1315"/>
+        </scene>
         <!--Log In View Controller-->
         <scene sceneID="vsO-Qj-dsN">
             <objects>
@@ -169,7 +186,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cmz-VQ-VJc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="254" y="360"/>
+            <point key="canvasLocation" x="254" y="152"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="1ZH-uc-cxV">
@@ -251,7 +268,10 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="moc-4R-NIM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2260" y="-826.6866566716642"/>
+            <point key="canvasLocation" x="2228" y="-816"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="8iU-ns-VU3"/>
+    </inferredMetricsTieBreakers>
 </document>

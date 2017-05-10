@@ -24,9 +24,6 @@
                                             </label>
                                             <label alignment="left" text="Content" numberOfLines="0" id="Pp1-zA-Zle"/>
                                         </items>
-                                        <connections>
-                                            <segue destination="R5d-hx-dye" kind="modal" id="bOi-sF-78i"/>
-                                        </connections>
                                     </group>
                                     <connections>
                                         <outlet property="contentLabel" destination="Pp1-zA-Zle" id="HKM-Bf-tBg"/>
