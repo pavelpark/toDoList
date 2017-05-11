@@ -81,4 +81,12 @@ typedef void(^FirebaseCallBack) (NSArray *allTodos);
 }
 
 
+-(void)session:(WCSession *)session didReceiveMessage:(NSDictionary<NSString *,id> *)message replyHandler:(void (^)(NSDictionary<NSString *,id> * _Nonnull))replyHandler{
+    
+    [self startMonitoringTodoUpdates:^(NSArray *allTodos) {
+        replyHandler(@{@"todos": allTodos});
+    }];
+}
+
+
 @end
