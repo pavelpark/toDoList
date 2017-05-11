@@ -12,7 +12,9 @@
 
 #import "toDo.h"
 
-@interface InterfaceController ()
+@import WatchConnectivity;
+
+@interface InterfaceController () <WCSessionDelegate>
 
 @property (unsafe_unretained, nonatomic) IBOutlet WKInterfaceTable *table;
 
@@ -60,6 +62,9 @@
 - (void)willActivate {
     // This method is called when watch view controller is about to be visible to user
     [super willActivate];
+    
+    [[WCSession defaultSession] setDelegate:self];
+    [[WCSession defaultSession] activateSession];
 }
 
 - (void)didDeactivate {

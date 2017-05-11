@@ -9,8 +9,11 @@
 #import "AppDelegate.h"
 
 @import Firebase;
+@import WatchConnectivity;
 
-@interface AppDelegate ()
+typedef void(^FirebaseCallBack) (NSArray *allTodos);
+
+@interface AppDelegate ()<WCSessionDelegate>
 
 @end
 
@@ -22,7 +25,32 @@
     
     [FIRApp configure];
     
+    [[WCSession defaultSession] setDelegate:self];
+    [[WCSession defaultSession] activateSession];
+    
     return YES;
+}
+
+-(void)startMonitoringTodoUpdates:(FirebaseCallBack)callback{
+    
+    FIRDatabaseReference *dataBaseReference = [[FIRDatabase database] reference];
+    
+    FIRUser *currentUser = [[FIRAuth auth] currentUser];
+    
+    FIRDatabaseReference *userReference = [[dataBaseReference child:@"users"] child:currentUser.uid];
+    
+    [[userReference child:@"todos"] observeEventType:FIRDataEventTypeValue withBlock:^(FIRDataSnapshot * _Nonnull snapshot) {
+        
+        NSMutableArray *todoDictionaries = [[NSMutableArray alloc]init];
+        
+        for (FIRDataSnapshot *todoReference in snapshot.children) {
+            [todoDictionaries addObject:todoReference.value];
+            
+            dispatch_async(dispatch_get_main_queue(), ^{
+                callback(todoDictionaries.copy);
+            });
+        }
+    }];
 }
 
 
