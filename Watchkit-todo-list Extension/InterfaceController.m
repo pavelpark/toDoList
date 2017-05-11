@@ -43,21 +43,21 @@
     }
 }
 
--(NSArray<toDo *> *)allTodos{
-    toDo *firstTodo = [[toDo alloc]init];
-    firstTodo.title = @"First Todo";
-    firstTodo.content = @"This is a todo.";
-    
-    toDo *secondTodo = [[toDo alloc]init];
-    secondTodo.title = @"Second Todo";
-    secondTodo.content = @"This is another amazing todo.";
-    
-    toDo *thirdTodo = [[toDo alloc]init];
-    thirdTodo.title = @"Third Todo";
-    thirdTodo.content = @"This is another another todo.";
-    
-    return @[firstTodo, secondTodo, thirdTodo];
-}
+//-(NSArray<toDo *> *)allTodos{
+//    toDo *firstTodo = [[toDo alloc]init];
+//    firstTodo.title = @"First Todo";
+//    firstTodo.content = @"This is a todo.";
+//    
+//    toDo *secondTodo = [[toDo alloc]init];
+//    secondTodo.title = @"Second Todo";
+//    secondTodo.content = @"This is another amazing todo.";
+//    
+//    toDo *thirdTodo = [[toDo alloc]init];
+//    thirdTodo.title = @"Third Todo";
+//    thirdTodo.content = @"This is another another todo.";
+//    
+//    return @[firstTodo, secondTodo, thirdTodo];
+//}
 
 - (void)willActivate {
     // This method is called when watch view controller is about to be visible to user
@@ -65,6 +65,29 @@
     
     [[WCSession defaultSession] setDelegate:self];
     [[WCSession defaultSession] activateSession];
+    //message parameter is where you want to handle the iOS app new toDo data to save to Firebase.
+    [[WCSession defaultSession] sendMessage:@{} replyHandler:^(NSDictionary<NSString *,id> * _Nonnull replyMessage) {
+    
+        NSArray *todosDictionaries = replyMessage[@"todos"];
+        
+        
+        NSMutableArray *allTodos = [[NSMutableArray alloc]init];
+        
+        for (NSDictionary *todoObject in todosDictionaries) {
+            
+            toDo *newTodo = [[toDo alloc]init];
+            newTodo.title = todoObject[@"title"];
+            newTodo.content = todoObject[@"content"];
+            
+            [allTodos addObject:newTodo];
+        }
+        
+        self.allTodos = allTodos.copy;
+        [self setupTable];
+        
+    } errorHandler:^(NSError * _Nonnull error) {
+        NSLog(@"%@", error.localizedDescription);
+    }];
 }
 
 - (void)didDeactivate {
@@ -72,10 +95,11 @@
     [super didDeactivate];
 }
 
--(void)table:(WKInterfaceTable *)table didSelectRowAtIndex:(NSInteger)rowIndex{
-    
-    
-}
+
+
+
+
+
 
 @end
 
