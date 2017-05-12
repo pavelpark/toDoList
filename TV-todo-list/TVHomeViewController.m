@@ -23,7 +23,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.tableView.dataSource = self;
-    [FirebaseAPI fetchAllTodos:^(NSArray<toDo *> *allTodos) {
+    [FirebaseAPI fetchAllTodos:@"USER'S EMAIL" withCompletion:^(NSArray<toDo *> *allTodos) {
         NSLog(@"%@",allTodos);
         
         self.allTodos = allTodos;

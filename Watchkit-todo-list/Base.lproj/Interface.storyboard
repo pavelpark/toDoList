@@ -39,12 +39,5 @@
                 </controller>
             </objects>
         </scene>
-        <!--Interface Controller-->
-        <scene sceneID="bd7-P1-sAr">
-            <objects>
-                <controller id="R5d-hx-dye"/>
-            </objects>
-            <point key="canvasLocation" x="355" y="37"/>
-        </scene>
     </scenes>
 </document>
